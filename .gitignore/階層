@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+	 int i,j;
+	 int sum;
+	 
+	 printf("Enter a positive integer: ");
+	 scanf("%d",&i);
+	 
+	 for(j=i;j>0;j--){
+	 	sum=sum*j;
+	}
+	 printf("%d!=%d",i,sum);
+	
+	  
+	 if(i<0){
+	 	printf("It is not exist %d!",i);
+	 }
+}
