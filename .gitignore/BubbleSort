@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define SIZE 100
+
+void bubblesort();
+
+int main(void)
+{
+	int a[100];
+	int i;
+	
+	srand(time(NULL));
+	
+	printf("Before: ");
+	for(i=0;i<=SIZE;i++){
+		a[i]=rand()%1000+1; //從1到1000之間取亂數 
+		printf("%d ,",a[i]);
+	}
+	
+	bubblesort(a);
+	
+	printf("\nAfter: ");
+	for(i=0;i<=SIZE;i++){
+		printf("%d ,",a[i]);
+	}
+}
