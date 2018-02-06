@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int gcd(int a,int b);
+
+int main()
+{
+	int i,j;
+	
+	printf("Enter two integers: \n");
+	scanf("%d%d",&i,&j);
+
+	if(i>j){
+		printf("The gcd of %d and %d is : %d",i,j,gcd(i,j));
+	}
+	else{
+		printf("The gcd of %d and %d is : %d",i,j,gcd(j,i));
+	}
+}
+
+int gcd(int a,int b)
+
+{
+	if(a%b==0){
+		return b;
+	}
+	else{
+		return gcd(b,a%b);
+	}
+}
