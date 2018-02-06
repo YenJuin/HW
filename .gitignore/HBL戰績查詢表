@@ -1,0 +1,380 @@
+#include<stdio.h>
+
+void NANSHAN(); //南山高中 
+void KYVS(); //高苑工商 
+void DONGSHAN(); //東山高中 
+void NRVS(); //能仁家商 
+void TAISHAN(); //泰山高中 
+void SONGSHAN(); //松山高中 
+void NANHU(); //南湖高中 
+void TONGTEX(); //東泰高中 
+ 
+int main(void)
+{
+	int choice;
+	
+	printf("************************************HBL複賽階段戰績查詢表************************************\n");
+	puts(" ");
+	printf("(1)南山高中 (2)高苑工商 (3)東山高中 (4)能仁家商 (5)泰山高中 (6)松山高中 (7)南湖高中 (8)東泰高中\n");
+	puts(" ");
+	printf("請選擇想要查詢的學校: \n");
+	scanf("%d",&choice);
+	puts(" ");
+	
+	//選擇其中一個選項 
+	switch(choice){
+		case 1:
+			printf("南山高中:\n");
+			NANSHAN();
+			break;
+			
+		case 2:
+			printf("高苑工商:\n");
+			KYVS();
+			break;
+			
+		case 3:
+			printf("東山高中:\n");
+			DONGSHAN();
+			break;
+			
+		case 4:
+			printf("能仁家商:\n");
+			NRVS();
+			break;
+			
+		case 5:
+			printf("泰山高中:\n");
+			TAISHAN();
+			break;
+			
+		case 6:
+			printf("松山高中:\n");
+			SONGSHAN();
+			break;
+			
+		case 7:
+			printf("南湖高中:\n");
+			NANHU();
+			break;
+			
+		case 8:
+			printf("東泰高中:\n");
+			TONGTEX();
+			break; 
+	}
+}
+
+void NANSHAN(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=116,b=270,c=48,d=129,e=65,f=98,g=72,h=160,i=93,j=92,k=25,l=87,m=86,n=5,o=0;
+	
+	FGM = a*100/b; //二分球命中率=(投進次數/出手次數)*100 
+	TPM = c*100/d; //三分球命中率=(投進次數/出手次數)*100
+	FTM = e*100/f; //罰球命中率=(投進次數/出手次數)*100
+	OFF = g;
+	DFF = h;
+	TOT = g+h; //總籃板=進攻籃板+防守籃板 
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o); //勝率=[勝場數/(勝場數+敗場數)]*100 
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	// 若勝率大於50%,則稱之為WINNNING RECORD 
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{ // 反之,則稱為LOSING RECORD 
+		printf("LOSING RECORD!");
+	}
+}
+void KYVS(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=108,b=243,c=36,d=132,e=63,f=93,g=72,h=170,i=80,j=41,k=39,l=87,m=87,n=4,o=1;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void DONGSHAN(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=116,b=230,c=29,d=104,e=72,f=113,g=49,h=143,i=85,j=56,k=14,l=90,m=102,n=3,o=2;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void NRVS(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=117,b=201,c=58,d=155,e=56,f=77,g=49,h=129,i=177,j=108,k=67,l=68,m=74,n=5,o=0;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void TAISHAN(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=120,b=251,c=30,d=113,e=77,f=102,g=78,h=156,i=76,j=38,k=31,l=88,m=86,n=4,o=1;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void SONGSHAN(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=110,b=273,c=36,d=130,e=60,f=102,g=107,h=155,i=53,j=50,k=31,l=98,m=98,n=3,o=2;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void NANHU(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=112,b=248,c=40,d=139,e=89,f=139,g=63,h=168,i=70,j=38,k=14,l=88,m=88,n=3,o=3;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
+void TONGTEX(){
+	int FGM,TPM,FTM,OFF,DFF,TOT,AST,ST,BS,PF,TO,WF,LF,WP;
+	int a=127,b=335,c=37,d=130,e=62,f=101,g=115,h=146,i=110,j=74,k=14,l=127,m=112,n=3,o=3;
+	
+	FGM = a*100/b;
+	TPM = c*100/d;
+	FTM = e*100/f;
+	OFF = g;
+	DFF = h;
+	TOT = g+h;
+	AST = i;
+	ST = j;
+	BS = k;
+	PF = l;
+	TO = m;
+	WF = n;
+	LF = 0;
+	WP = n*100/(n+o);
+	
+	printf("二分球命中率:%d%%\n",FGM);
+	printf("三分球命中率:%d%%\n",TPM);
+	printf("罰球命中率:%d%%\n",FTM);
+	printf("進攻籃板:%d\n",OFF);
+	printf("防守籃板:%d\n",DFF);
+	printf("總籃板:%d\n",TOT);
+	printf("助攻:%d\n",AST);
+	printf("抄截:%d\n",ST);
+	printf("阻攻:%d\n",BS);
+	printf("犯規:%d\n",PF);
+	printf("失誤:%d\n",TO);
+	printf("勝場:%d 敗場:%d 勝率:%d%%\n",WF,LF,WP);
+	
+	if(WP>=50){
+		printf("WINNING RECORD!");
+	}
+	else{
+		printf("LOSING RECORD!");
+	}
+}
