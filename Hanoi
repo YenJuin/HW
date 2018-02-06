@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int counter = 0;
+
+void hanoi(int n,int s ,int m,int d)
+{	
+	if(n == 1){
+		printf("move disk1 from peg %d to peg %d\n",s,d);
+		counter++;
+		return;
+	}
+	
+	hanoi(n-1,s,d,m);
+	printf("move disk %d from peg %d to peg %d\n",n,s,d);
+	counter++;
+	hanoi(n-1,m,s,d);
+}
+
+int main(void)
+{
+	int disk_num;
+	
+	printf("Please enter the number of disks: ");
+	scanf("%d",&disk_num);
+	
+	hanoi(disk_num,1,2,3);
+	
+	printf("The total number of movements is:%d",counter);
+}
